@@ -48,11 +48,11 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 48e5b06946e4        fedora:latest       "/bin/bash"         56 seconds ago      Up 5 seconds                            demo
 
 # List container by specific name
-$ (venv) ~/ansible-docker-inventory/src/docker_inventory.py --host demo
+$ (venv) ~/git/ansible-docker-inventory/src/docker_inventory.py --host demo
 {"all": {"hosts": ["demo"]}, "_meta": {"hostvars": {"demo": {"ansible_connection": "docker"}}}}
 
 # List all containers
-$ (venv) ~/ansible-docker-inventory/src/docker_inventory.py --list
+$ (venv) ~/git/ansible-docker-inventory/src/docker_inventory.py --list
 {"all": {"hosts": ["demo"]}, "_meta": {"hostvars": {"demo": {"ansible_connection": "docker"}}}}
 
 # Ping container
@@ -63,7 +63,7 @@ demo | SUCCESS => {
 }
 
 # Run a shell command in the container
-$ (venv) ansible demo -m shell -a "cat /etc/fedora-release" -i ~/ansible-docker-inventory/src/docker_inventory.py
+$ (venv) ansible demo -m shell -a "cat /etc/fedora-release" -i ~/git/ansible-docker-inventory/src/docker_inventory.py
 demo | SUCCESS | rc=0 >>
 Fedora release 25 (Twenty Five)
 
