@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """An Ansible dynamic inventory script for docker containers. This script
 assumes you already have docker running on your system.
 
