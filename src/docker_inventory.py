@@ -64,7 +64,7 @@ class DockerInventory(object):
 
         :return: Collection of containers.
         """
-        return self.docker.containers.list(all=True)
+        return self.docker.containers.list(all=False)
 
     def containers(self):
         """Return all docker containers to be used by ansible inventory host.
