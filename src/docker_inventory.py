@@ -49,7 +49,7 @@ class DockerInventory(object):
             * Generate the JSON data structure.
             * Print the JSON data structure for ansible to use.
         """
-        self.docker = DockerClient()
+        self.docker = DockerClient().from_env()
 
         if option.list:
             data = self.containers()
